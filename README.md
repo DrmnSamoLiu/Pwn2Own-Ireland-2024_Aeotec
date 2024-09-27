@@ -13,7 +13,7 @@ Feel free to open discussions in the `Discussions` tab, although we cannot guara
 - UART pins are clearly marked on the back side of the PCB.
 - No interactive shell available through UART, only some kernel boot logs.
 
-<br><br>
+<br>
 
 **Processor**: NXP MCIMX6Y1DVM05AB <br><br>
 **Storage**: Samsung KLM4G1FETE-B041, eMMC 5.1, 4GiB. Dimension: 11x10x0.8
@@ -56,7 +56,7 @@ File Attributes
 
 - OTA update happens through TLS, so can't just easily find out download URL by capturing packets.
 - Uboot, Linux kernel, op-tee and initrd are not encrypted in the eMMC.
-- User data and rootfs LVM partitions are encrypted with LUKS:
+- User data and rootfs LVM volumes are encrypted with LUKS:
 ```
   ACTIVE            '/dev/vg_emmc/lv_data' [256.00 MiB] inherit
   ACTIVE            '/dev/vg_emmc/lv_golden.old' [48.00 MiB] inherit
