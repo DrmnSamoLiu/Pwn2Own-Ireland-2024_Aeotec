@@ -55,7 +55,7 @@ File Attributes
 # Firmware
 
 - OTA update happens through TLS, so can't just easily find out download URL by capturing packets.
-- Uboot, Linux kernel, op-tee and initrd are not encrypted in the eMMC.
+- U-boot, Linux kernel, op-tee and initrd are not encrypted in the eMMC.
 - User data and rootfs LVM volumes are encrypted with LUKS:
 ```
   ACTIVE            '/dev/vg_emmc/lv_data' [256.00 MiB] inherit
@@ -100,7 +100,7 @@ Key Slot 7: DISABLED
 
 # Boot Process
 
-1. Uboot loads `standard.fit` from `lba` partition in the eMMC.
+1. U-boot loads `standard.fit` from `lba` partition in the eMMC.
     - `standard.fit` is a Yocto Flattened Image Tree, which contains images for the boot process.
 <br><br>
 2. Op-tee image is loaded and it will then load Linux kernel.
@@ -178,5 +178,5 @@ Created:         Tue Apr  5 19:00:00 2011
 # Side Note
 
 - It MAY be possible to boot into custom Linux kernel in a USB drive. (I haven't tested it personally.)<br><br>
-    - The Uboot boot command `boot_primary` checks for `"$boot_mode" = "1"`, which seems to be set if USB-OTG power is enabled. (Or injecting voltage into `OTG1_VBUS` pad on the back side of the PCB?)
+    - The U-boot boot command `boot_primary` checks for `"$boot_mode" = "1"`, which seems to be set if USB-OTG power is enabled. (Or injecting voltage into `OTG1_VBUS` pad on the back side of the PCB?)
     - If true, it looks for `standard.fit` in USB volume and load it to `$loadaddr`. If this succeeded too, it then proceed to execute `bootm $loadaddr` **\*without checking any security parameter such as signatures\***.
