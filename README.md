@@ -103,12 +103,12 @@ Key Slot 7: DISABLED
 1. U-boot loads `standard.fit` from `lba` partition in the eMMC.
     - `standard.fit` is a Yocto Flattened Image Tree, which contains images for the boot process.
 <br><br>
-2. Op-tee image is loaded and it will then load Linux kernel.
+2. Op-tee image is loaded and it will load the Linux kernel.
 <br><br>
 3. When booted into initrd,  `tee-supplicant` is started. 
     - `/usr/sbin/get_key`  is called during the execution of `init.d/11-mountcrypto`
     - It will get the key from eMMC RPMB space through op-tee.
-    - The key will then be used to decrypt LUKS encryoted LVM volumes.
+    - The key will then be used to decrypt LUKS encrypted LVM volumes.
 
 # FIT Image
 
