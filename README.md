@@ -1,6 +1,6 @@
 # Foreword
 My friend and I was planning to pwn this Aeotec smart home hub for this year's P2O, but sadly we realized we won't have much time to work on it before the deadline. <br><br>
-We decided to publish the information we gathered as recon work in hopes that it could help the user community or other fellow security researchers. If you used any of the information provided here in your work, please remember to credit this repository.<br><br>
+We decided to publish the information we gathered during recon work, in hopes that it could help the user community or other fellow security researchers. If you used any of the information provided here in your work, please remember to credit this repository.<br><br>
 Feel free to open discussions in the `Discussions` tab, although we cannot guarantee we'll join or reply to the threads.
 
 # High Resolusion Image
