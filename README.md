@@ -177,6 +177,6 @@ Created:         Tue Apr  5 19:00:00 2011
 
 # Side Note
 
-- It MAY be possible to boot into custom Linux kernel in a USB drive. (I haven't tested it personally.)<br><br>
+- It MAY be possible to boot into custom firmware in a USB drive. (I haven't tested it personally.)<br><br>
     - The U-boot boot command `boot_primary` checks for `"$boot_mode" = "1"`, which seems to be set if USB-OTG power is enabled. (Or injecting voltage into `OTG1_VBUS` pad on the back side of the PCB?)
     - If true, it looks for `standard.fit` in USB volume and load it to `$loadaddr`. If this succeeded too, it then proceed to execute `bootm $loadaddr` **\*without checking any security parameter such as signatures\***.
